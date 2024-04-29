@@ -28,7 +28,7 @@ const Product = ({ product }) => {
             </Link>
             <div className="w-full bg-slate-300 font-semibold  rounded-lg flex justify-around" >
                 <button className="w-1/2 p-3 text-cyan-800 hover:bg-cyan-800 hover:text-white transition rounded-lg  ">
-                    ♥
+                    fav
                 </button>
                 <button onClick={() => { handleAddProduct() }} className="w-1/2 p-3 text-cyan-800 hover:bg-cyan-800 hover:text-white transition rounded-lg font-bold text-xl">+</button>
             </div>

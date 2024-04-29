@@ -5,7 +5,7 @@ import { useLoginState } from "@/store/store"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-const login = () => {
+const Login = () => {
     const [name, setName] = useState("")
     const [surname, setSurname] = useState("")
     const [password, setPassword] = useState("")
@@ -51,4 +51,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login

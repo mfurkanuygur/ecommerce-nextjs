@@ -1,6 +1,6 @@
 import Product from "@/components/product/Product";
 import Banner from "@/components/banner/Banner";
-import { getAllProducts } from "@/lib/data";
+import { getAllProducts, testFetch } from "@/lib/data";
 import Link from "next/link";
 import Brands from "@/components/brands/Brands";
 import MainBanner from "@/components/mainBanner/MainBanner";
@@ -8,6 +8,7 @@ import MainBanner from "@/components/mainBanner/MainBanner";
 export default async function Home() {
   let products = await getAllProducts()
   products = products?.sort(() => Math.random() - 0.5);
+  // const test = await testFetch()
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:px-24">
       <MainBanner />
@@ -27,6 +28,11 @@ export default async function Home() {
               <Product product={product} key={product.id} />
             ))
           }
+          {/* {
+            test.data.map(tester => (
+              <div key={tester.id}>{tester.name}</div>
+            ))
+          } */}
         </div>
         <Banner />
         <div className="flex justify-between items-center ">
